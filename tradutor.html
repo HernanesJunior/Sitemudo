@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tradutor</title>
+    <title>Tradutor e Voz | Comunicação Acessível</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="container">
             <h1>Voz para Todos</h1>
-            <button class="menu-toggle">☰</button>
-            <nav class="nav-menu">
+            <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+            <nav id="navbar">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="tradutor.html">Tradutor</a></li>
+                    <li><a href="tradutor.html" class="active">Ferramenta Voz</a></li>
                     <li><a href="aprendizado.html">Aprendizado</a></li>
-                    <li><a href="frases.html">Frases</a></li>
-                    <li><a href="recursos.html">Recursos</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
-        <section class="tradutor">
-        <div class="container">
-    <form><!-- onde entra o texto e converte-->
-        
-      <input id="txt" type="text" class="txt" placeholder="Digite o texto aqui..."/> <!---->
-      <div>
-        <label for="rate">Rate</label
-        ><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
-        <div class="rate-value">1</div>
-        <div class="clearfix"></div>
-      </div>
-      <div>
-        <label for="pitch">Pitch</label>   <!---->
-        ><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
-        <div class="pitch-value">1</div>   <!---->
-        <div class="clearfix"></div>
-      </div>
-      <select></select>  <!---->
-      
-      <button id="textoParaAudio">Texto para Áudio</button>
-    </div>
-</section>
-    </form>
-</main>
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Comunicação Acessível</p>
-    </div>
-</footer>
-    
 
-    <script src="script.js"></script>
-  </body>
+    <main>
+        <section class="container">
+            <div class="translator-container">
+                <div class="input-group">
+                    <label for="txt" style="display:block; margin-bottom: 0.5rem; color: var(--accent-color);">Digite
+                        seu texto:</label>
+                    <textarea id="txt" class="text-area" placeholder="Digite o texto aqui para ouvir..."></textarea>
+                </div>
+
+                <div class="controls">
+                    <div class="control-item">
+                        <label for="voiceSelect">Voz / Idioma</label>
+                        <select id="voiceSelect"></select>
+                    </div>
+
+                    <div class="control-item">
+                        <div class="slider-container">
+                            <label for="rate">Velocidade</label>
+                            <span class="rate-value" style="width: 30px; text-align: right;">1</span>
+                        </div>
+                        <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+                    </div>
+
+                    <div class="control-item">
+                        <div class="slider-container">
+                            <label for="pitch">Tom (Pitch)</label>
+                            <span class="pitch-value" style="width: 30px; text-align: right;">1</span>
+                        </div>
+                        <input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="start-record-btn" class="btn btn-secondary" title="Reconhecimento de Voz">
+                        🎤 Falar (STT)
+                    </button>
+                    <button id="speak-btn" class="btn btn-primary">
+                        🔊 Ouvir Texto (TTS)
+                    </button>
+                </div>
+
+                <div id="status-msg"
+                    style="margin-top: 1rem; color: #94a3b8; font-size: 0.9rem; text-align: center; height: 1.5rem;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Comunicação Acessível.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Simple Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendizado de Libras | Voz para Todos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Voz para Todos</h1>
+            <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tradutor.html">Ferramenta Voz</a></li>
+                    <li><a href="aprendizado.html" class="active">Aprendizado</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Aprenda Libras</h2>
+                <p>Introdução à Língua Brasileira de Sinais. Comece pelo básico.</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding-bottom: 4rem;">
+            <div class="grid">
+                <!-- Card 1: Alfabeto -->
+                <div class="card">
+                    <h3>Abecedário (Alfabeto Manual)</h3>
+                    <p style="margin-bottom: 1rem;">O primeiro passo para aprender Libras é conhecer o alfabeto manual,
+                        usado para soletrar nomes e palavras que não possuem sinal específico.</p>
+                    <div
+                        style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 0.5rem; text-align: center; margin-bottom: 1rem;">
+                        <span style="font-size: 3rem;">👋</span>
+                        <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem;">(Ilustração representativa)
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary" style="width: 100%;">Ver Alfabeto Completo</button>
+                </div>
+
+                <!-- Card 2: Cumprimentos -->
+                <div class="card">
+                    <h3>Cumprimentos Básicos</h3>
+                    <p style="margin-bottom: 1rem;">Aprenda a dizer "Oi", "Bom dia", "Boa noite" e "Tudo bem?".
+                        Essencial para iniciar qualquer conversa.</p>
+                    <div
+                        style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 0.5rem; text-align: center; margin-bottom: 1rem;">
+                        <span style="font-size: 3rem;">🤝</span>
+                        <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem;">(Ilustração representativa)
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary" style="width: 100%;">Ver Sinais</button>
+                </div>
+
+                <!-- Card 3: Números -->
+                <div class="card">
+                    <h3>Números e Quantidades</h3>
+                    <p style="margin-bottom: 1rem;">Entenda como sinalizar números cardinais (quantidade) e ordinais
+                        (ordem). A configuração de mão muda dependendo do contexto.</p>
+                    <div
+                        style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 0.5rem; text-align: center; margin-bottom: 1rem;">
+                        <span style="font-size: 3rem;">🔢</span>
+                        <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem;">(Ilustração representativa)
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary" style="width: 100%;">Ver Números</button>
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 3rem; text-align: center; padding: 2rem; background: var(--glass-bg); border-radius: 1rem; border: 1px solid var(--glass-border);">
+                <h3>Em Desenvolvimento...</h3>
+                <p style="margin-bottom: 1.5rem; margin-top: 1rem; color: #94a3b8;">Estamos preparando videoaulas
+                    completas e dicionário interativo. Fique ligado para novidades!</p>
+                <a href="https://www.gov.br/vlibras/" target="_blank" class="btn btn-primary"
+                    rel="noopener noreferrer">Acessar VLibras (Externo)</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Comunicação Acessível</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

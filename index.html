@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comunicação Acessível</title>
+    <title>Comunicação Acessível | Voz para Todos</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="container">
             <h1>Voz para Todos</h1>
-            <button class="menu-toggle">☰</button>
-            <nav class="nav-menu">
+            <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+            <nav id="navbar">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="tradutor.html">Tradutor</a></li>
+                    <li><a href="tradutor.html">Ferramenta Voz</a></li>
                     <li><a href="aprendizado.html">Aprendizado</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
-        <section class="destaque">
+        <section class="hero">
             <div class="container">
-                <h2>Bem-vindo ao Comunicação Acessível!</h2>
-                <p>Um site para facilitar a comunicação entre pessoas surdas e ouvintes.</p>
-                <div class="botoes">
-                    <a href="tradutor.html" class="botao principal">Começar a usar</a>
-                    <a href="aprendizado.html" class="botao secundario">Aprender Libras</a>
+                <h2>Quebrando Barreiras na Comunicação</h2>
+                <p>Uma plataforma moderna para facilitar a interação entre pessoas surdas, ouvintes e com dificuldades
+                    de fala.</p>
+                <div class="btn-group">
+                    <a href="tradutor.html" class="btn btn-primary">Começar Agora</a>
+                    <a href="aprendizado.html" class="btn btn-secondary">Aprender Libras</a>
                 </div>
             </div>
         </section>
-        <section class="funcionalidades">
+
+        <section class="features">
             <div class="container">
-                <h2>Funcionalidades Principais</h2>
-                <div class="grid">
+                <h2>O que oferecemos</h2>
+                <div class="grid" id="features-grid">
+                    <!-- Cards will be populated dynamically or static below -->
+                    <div class="card">
+                        <h3>Texto para Voz</h3>
+                        <p>Transforme seus textos em fala natural instantaneamente. Ideal para quem tem dificuldades na
+                            fala.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Reconhecimento de Voz</h3>
+                        <p>Fale e veja suas palavras transformadas em texto. Uma ferramenta essencial para conversas
+                            rápidas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Tradução para Libras</h3>
+                        <p>Aprenda e comunique-se utilizando a Língua Brasileira de Sinais (Em Breve).</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
-            <p>&copy; 2025 Comunicação Acessível</p>
+            <p>&copy; 2025 Comunicação Acessível. Desenvolvido com foco em inclusão.</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+
+    <script>
+        // Simple Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>

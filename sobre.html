@@ -1,72 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comunicação Acessível</title>
+    <title>Sobre o Projeto | Voz para Todos</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="container">
             <h1>Voz para Todos</h1>
-            <button class="menu-toggle">☰</button>
-            <nav class="nav-menu">
+            <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+            <nav id="navbar">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="tradutor.html">Tradutor</a></li>
+                    <li><a href="tradutor.html">Ferramenta Voz</a></li>
                     <li><a href="aprendizado.html">Aprendizado</a></li>
-                    <li><a href="frases.html">Frases</a></li>
-                    <li><a href="recursos.html">Recursos</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="sobre.html" class="active">Sobre</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
-        <section class="destaque">
+        <section class="hero" style="padding-bottom: 2rem;">
             <div class="container">
-                <h2>Projeto "Voz para Todos": Transformando Escritas em Áudio para a Comunicação de Mudos!</h2>
-                <p>
-O projeto "Voz para Todos" tem como objetivo principal revolucionar a forma como pessoas mudas se comunicam, oferecendo uma ferramenta simples e eficaz para que suas escritas sejam convertidas em áudio.
-
-Imagine a seguinte situação: uma pessoa que não consegue falar precisa expressar uma ideia, fazer uma pergunta ou participar de uma conversa. Com o "Voz para Todos", ela poderá digitar o que deseja comunicar em um aplicativo ou dispositivo, e a tecnologia irá instantaneamente transformar essa escrita em fala audível.
-
-Como funciona?
-De forma simplificada, o projeto utiliza softwares e algoritmos que "lêem" o texto digitado e o convertem em uma voz sintética. É como se a própria escrita da pessoa ganhasse uma voz.
-
-Por que é importante?
-Este projeto tem o potencial de:
-
-Promover a inclusão social: Pessoas mudas terão mais autonomia para se comunicar em diversas situações do dia a dia, desde uma ida ao médico até um bate-papo com amigos.
-
-Melhorar a qualidade de vida: Reduz a frustração e o isolamento que a dificuldade de comunicação pode causar.
-
-Facilitar a educação e o acesso à informação: Permite que se expressem em ambientes acadêmicos e interajam de forma mais plena com o mundo ao seu redor.
-
-Em resumo, o "Voz para Todos" é uma ponte entre o mundo escrito e o mundo falado, permitindo que a voz daqueles que não podem falar seja ouvida de forma clara e acessível. É uma iniciativa focada em tecnologia a serviço da inclusão e da dignidade humana.</p>
-                <div class="botoes">
-                    <a href="tradutor.html" class="botao principal">Começar a usar</a>
-                    <a href="aprendizado.html" class="botao secundario">Aprender Libras</a>
-                </div>
+                <h2>Transformando Escrita em Voz</h2>
+                <p>Nossa missão é dar voz a quem precisa e facilitar a comunicação para todos.</p>
             </div>
         </section>
-        <section class="funcionalidades">
-            <div class="container">
-                <h2>Funcionalidades Principais</h2>
-                <div class="grid">
+
+        <section class="container">
+            <div class="card" style="margin-bottom: 3rem;">
+                <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">O
+                    Projeto "Voz para Todos"</h3>
+                <p style="margin-bottom: 1rem;">
+                    O projeto <strong>"Voz para Todos"</strong> tem como objetivo principal revolucionar a forma como
+                    pessoas com dificuldades de fala ou audição se comunicam, oferecendo uma ferramenta simples e eficaz
+                    que converte texto em áudio e vice-versa.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Imagine a seguinte situação: uma pessoa que não consegue falar verbalmente precisa expressar uma
+                    ideia, fazer uma pergunta ou participar de uma conversa. Com nossa plataforma, ela poderá digitar o
+                    que deseja comunicar em seu dispositivo, e a tecnologia irá instantaneamente transformar essa
+                    escrita em fala audível e clara.
+                </p>
+
+                <h4 style="margin: 2rem 0 1rem; color: var(--accent-color);">Como funciona?</h4>
+                <p style="margin-bottom: 1rem;">
+                    Utilizamos APIs modernas de síntese de voz (Web Speech API) que "lêem" o texto digitado e o
+                    convertem em uma voz sintética natural. Além disso, implementamos o reconhecimento de voz para
+                    converter a fala de outra pessoa em texto, fechando o ciclo da comunicação.
+                </p>
+
+                <h4 style="margin: 2rem 0 1rem; color: var(--accent-color);">Impacto Social</h4>
+                <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 2rem; color: var(--text-color);">
+                    <li style="margin-bottom: 0.5rem;"><strong>Inclusão Social:</strong> Autonomia para se comunicar em
+                        qualquer lugar (hospitais, escolas, comércio).</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Qualidade de Vida:</strong> Redução da frustração e
+                        isolamento causados por barreiras na comunicação.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Acesso à Informação:</strong> Facilita a interação em
+                        ambientes acadêmicos e profissionais.</li>
+                </ul>
+
+                <div class="btn-group" style="justify-content: flex-start;">
+                    <a href="tradutor.html" class="btn btn-primary">Experimentar Agora</a>
+                    <a href="aprendizado.html" class="btn btn-secondary">Aprender Mais</a>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
             <p>&copy; 2025 Comunicação Acessível</p>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
