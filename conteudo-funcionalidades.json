@@ -1,0 +1,14 @@
+[
+    {
+        "titulo": "Tradução de Texto",
+        "descricao": "Digite o texto e veja a tradução em Libras."
+    },
+    {
+        "titulo": "Reconhecimento de Voz",
+        "descricao": "Fale e veja o texto traduzido para Libras."
+    },
+    {
+        "titulo": "Lições de Libras",
+        "descricao": "Aprenda Libras com lições interativas e exercícios."
+    }
+]

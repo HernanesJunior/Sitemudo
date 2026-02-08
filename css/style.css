@@ -1,0 +1,280 @@
+/* Estilos Globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Seção Destaque */
+.destaque {
+    background-color: #e6f7ff;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.destaque h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.destaque p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Adicionado para quebrar em múltiplas linhas em telas menores */
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 10px; /* Aumentado para 10px para melhor espaçamento em telas menores */
+    transition: background-color 0.3s ease;
+}
+
+.botao.principal {
+    background-color: #007bff;
+    color: white;
+}
+
+.botao.principal:hover {
+    background-color: #0056b3;
+}
+
+.botao.secundario {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.botao.secundario:hover {
+    background-color: #e0e0e0;
+}
+
+/* Seção Funcionalidades */
+.funcionalidades {
+    padding: 60px 0;
+}
+
+.funcionalidades h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.grid div {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid h3 {
+    margin-bottom: 15px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos para a página tradutor.html */
+.tradutor {
+    padding: 60px 0;
+    text-align: center;
+}
+
+
+.txt {
+    width: 90%; /* Ajustado para 90% para melhor responsividade */
+    max-width: 600px;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: vertical;
+    text-align: left; /* Alinha o texto à esquerda */
+    vertical-align: top;
+}
+
+.tradutor button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tradutor button:hover {
+    background-color: #0056b3;
+}
+
+.tradutor #resultado {
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.tradutor #reconhecimentoResultado {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+
+select{
+    padding: 15px 30px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px; /* Reduzido o padding para telas menores */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .destaque h2 {
+        font-size: 2em; /* Reduzido o tamanho da fonte para telas menores */
+    }
+
+    .destaque p {
+        font-size: 1em; /* Reduzido o tamanho da fonte para telas menores */
+    }
+
+    .botoes {
+        flex-direction: column; /* Botões em coluna em telas menores */
+        align-items: center;
+    }
+
+    .botao {
+        margin: 10px 0; /* Ajustado o espaçamento dos botões */
+        width: 90%; /* Ajustado a largura dos botões */
+    }
+
+    .tradutor textarea {
+        width: 95%; /* Ajustado a largura da área de texto */
+    }
+
+    .nav-menu {
+        display: none; /* Oculta a navegação em telas pequenas */
+        flex-direction: column;
+        width: 100%;
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        left: 0;
+        z-index: 10;
+    }
+
+    .nav-menu.show {
+        display: flex; /* Exibe a navegação quando a classe 'show' é adicionada */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu li {
+        margin: 0;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão hambúrguer em telas pequenas */
+    }
+}
+
+/* Estilos do menu hambúrguer */
+.menu-toggle {
+    display: none; /* Oculta o botão hambúrguer em telas grandes */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}

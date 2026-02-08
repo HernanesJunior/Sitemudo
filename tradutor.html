@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradutor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Voz para Todos</h1>
+            <button class="menu-toggle">☰</button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tradutor.html">Tradutor</a></li>
+                    <li><a href="aprendizado.html">Aprendizado</a></li>
+                    <li><a href="frases.html">Frases</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="tradutor">
+        <div class="container">
+    <form><!-- onde entra o texto e converte-->
+        
+      <input id="txt" type="text" class="txt" placeholder="Digite o texto aqui..."/> <!---->
+      <div>
+        <label for="rate">Rate</label
+        ><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+        <div class="rate-value">1</div>
+        <div class="clearfix"></div>
+      </div>
+      <div>
+        <label for="pitch">Pitch</label>   <!---->
+        ><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+        <div class="pitch-value">1</div>   <!---->
+        <div class="clearfix"></div>
+      </div>
+      <select></select>  <!---->
+      
+      <button id="textoParaAudio">Texto para Áudio</button>
+    </div>
+</section>
+    </form>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Comunicação Acessível</p>
+    </div>
+</footer>
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
