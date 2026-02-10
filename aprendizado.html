@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/libras-2016" rel="stylesheet">
 </head>
 
 <body>
@@ -48,7 +49,8 @@
                         <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem;">(Ilustração representativa)
                         </p>
                     </div>
-                    <button class="btn btn-secondary" style="width: 100%;">Ver Alfabeto Completo</button>
+                    <button id="btn-alphabet" class="btn btn-secondary" style="width: 100%;">Ver Alfabeto
+                        Completo</button>
                 </div>
 
                 <!-- Card 2: Cumprimentos -->
@@ -62,7 +64,7 @@
                         <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem;">(Ilustração representativa)
                         </p>
                     </div>
-                    <button class="btn btn-secondary" style="width: 100%;">Ver Sinais</button>
+                    <button id="btn-greetings" class="btn btn-secondary" style="width: 100%;">Ver Sinais</button>
                 </div>
 
                 <!-- Card 3: Números -->
@@ -76,7 +78,7 @@
                         <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem;">(Ilustração representativa)
                         </p>
                     </div>
-                    <button class="btn btn-secondary" style="width: 100%;">Ver Números</button>
+                    <button id="btn-numbers" class="btn btn-secondary" style="width: 100%;">Ver Números</button>
                 </div>
             </div>
 
@@ -91,6 +93,17 @@
         </section>
     </main>
 
+    <!-- Modal para Exibição dos Sinais -->
+    <div id="signs-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Título do Modal</h2>
+            <div id="modal-body" class="signs-grid">
+                <!-- Conteúdo será injetado via JS -->
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <p>&copy; 2025 Comunicação Acessível</p>
@@ -98,6 +111,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/learning.js"></script>
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('nav');
